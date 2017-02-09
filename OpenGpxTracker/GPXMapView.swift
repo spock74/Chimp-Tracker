@@ -111,7 +111,7 @@ class GPXMapView: MKMapView {
     func removeWaypoint(_ waypoint: GPXWaypoint) {
         let index = waypoints.index(of: waypoint)
         if index == nil {
-            print("Waypoint not found")
+            print("Waypoint não encontrado")
             return
         }
         self.removeAnnotation(waypoint)
