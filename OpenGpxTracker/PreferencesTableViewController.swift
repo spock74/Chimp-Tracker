@@ -47,8 +47,8 @@ class PreferencesTableViewController: UITableViewController, UINavigationBarDele
         self.tableView.frame = CGRect(x: navBarFrame.width + 1, y: 0, width: self.view.frame.width, height:
             self.view.frame.height - navBarFrame.height)
         
-        self.title = "Preferences"
-        let shareItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(PreferencesTableViewController.closePreferencesTableViewController))
+        self.title = "Preferências"
+        let shareItem = UIBarButtonItem(title: "Feito", style: UIBarButtonItemStyle.plain, target: self, action: #selector(PreferencesTableViewController.closePreferencesTableViewController))
         self.navigationItem.rightBarButtonItems = [shareItem]
         
         //Load preferences from defaults
@@ -108,13 +108,13 @@ class PreferencesTableViewController: UITableViewController, UINavigationBarDele
             switch (indexPath.row) {
             case kUseOfflineCacheCell:
                 cell = UITableViewCell(style: .value1, reuseIdentifier: "CacheCell")
-                cell.textLabel?.text = "Offline cache"
+                cell.textLabel?.text = "Cache Offline"
                 if currentUseCache {
                     cell.accessoryType = .checkmark
                 }
             case kClearCacheCell:
                 cell = UITableViewCell(style: .value1, reuseIdentifier: "CacheCell")
-                cell.textLabel?.text = "Clear cache"
+                cell.textLabel?.text = "Limpar cache"
                 cell.textLabel?.textColor = UIColor.red
             default: fatalError("Unknown section")
             }
@@ -140,7 +140,7 @@ class PreferencesTableViewController: UITableViewController, UINavigationBarDele
         if indexPath.section == 0 {  // 0 -> sets and unsets cache
             switch indexPath.row {
             case kCacheSection:
-                print("toggle cache")
+                print("alternar cache")
                 let newUseCache = !self.currentUseCache //toggle value
                 defaults.set(newUseCache, forKey: kDefaultsKeyUseCache)
                 self.currentUseCache = newUseCache
@@ -149,12 +149,12 @@ class PreferencesTableViewController: UITableViewController, UINavigationBarDele
                 //notify the map
                 self.delegate?.didUpdateUseCache(newUseCache)
             case 1:
-                print("clear cache")
+                print("Limpar Cache")
                 // 1 -> clears cache
                 let cache = Cache<Data>(name: "ImageCache")
                 cache.clear()
                 let cell = tableView.cellForRow(at: indexPath)!
-                cell.textLabel?.text = "Cache is now empty"
+                cell.textLabel?.text = "Cache está agora vazio"
                 cell.textLabel?.textColor = UIColor.gray
             default:
                 fatalError("didSelectRowAt: Unknown cell")

@@ -64,10 +64,10 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
             map.removeWaypoint(waypoint)
         case kEditWaypointAccesoryButtonTag:
             print("[calloutAccesoryControlTapped: EDIT] editing waypoint with name \(waypoint.name)")
-            let alert = UIAlertView(title: "Edit Waypoint",
+            let alert = UIAlertView(title: "Editar Waypoint",
                 message: "Hint: To change the waypoint location drag and drop the pin",
-                delegate: self, cancelButtonTitle: "Cancel")
-            alert.addButton(withTitle: "Save")
+                delegate: self, cancelButtonTitle: "Cancelar")
+            alert.addButton(withTitle: "Salvar")
             alert.tag = kEditWaypointAlertViewTag
             alert.alertViewStyle = .plainTextInput
             alert.textField(at: 0)?.text = waypoint.title

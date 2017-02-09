@@ -8,7 +8,7 @@
 
 import Foundation
 
-let kNoFiles = "No gpx files"
+let kNoFiles = "Nenhum arquivo"
 
 import UIKit
 import MessageUI
@@ -36,9 +36,9 @@ class GPXFilesTableViewController: UITableViewController, UINavigationBarDelegat
         self.tableView.frame = CGRect(x: navBarFrame.width + 1, y: 0, width: self.view.frame.width, height:
             self.view.frame.height - navBarFrame.height)
         
-        self.title = "Your GPX Files"
+        self.title = "Meus Arqivos de Localização"
         
-        let shareItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(GPXFilesTableViewController.closeGPXFilesTableViewController))
+        let shareItem = UIBarButtonItem(title: "Feito", style: UIBarButtonItemStyle.plain, target: self, action: #selector(GPXFilesTableViewController.closeGPXFilesTableViewController))
         
         self.navigationItem.rightBarButtonItems = [shareItem]
         
@@ -107,11 +107,11 @@ class GPXFilesTableViewController: UITableViewController, UINavigationBarDelegat
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // self.showAlert(fileList.objectAtIndex(indexPath.row) as NSString, rowToUseInAlert: indexPath.row)
         let sheet = UIActionSheet()
-        sheet.title = "Select option"
-        sheet.addButton(withTitle: "Send by email")
-        sheet.addButton(withTitle: "Load in Map")
-        sheet.addButton(withTitle: "Cancel")
-        sheet.addButton(withTitle: "Delete")
+        sheet.title = "Selecione uma opção"
+        sheet.addButton(withTitle: "Enviar por email")
+        sheet.addButton(withTitle: "Carregar no Mapa")
+        sheet.addButton(withTitle: "Cancelar")
+        sheet.addButton(withTitle: "Del")
         sheet.cancelButtonIndex = 2
         sheet.destructiveButtonIndex = 3
         

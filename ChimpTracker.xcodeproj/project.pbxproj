@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -65,7 +65,7 @@
 		893BEC8519C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXWaypoint+MKAnnotation.swift"; sourceTree = "<group>"; };
 		8945A90D1DC7AD040029AF93 /* CachedTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedTileOverlay.swift; sourceTree = "<group>"; };
 		895F04B31A7143CE004BEE8A /* GPXExtentCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXExtentCoordinates.swift; sourceTree = "<group>"; };
-		898EECD519C49B5800B4B207 /* OpenGpxTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGpxTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		898EECD519C49B5800B4B207 /* ChimpTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChimpTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECD919C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898EECDA19C49B5800B4B207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		898EECDD19C49B5800B4B207 /* OpenGpxTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenGpxTracker.xcdatamodel; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		898EECE219C49B5800B4B207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		898EECE419C49B5800B4B207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		898EECE719C49B5800B4B207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		898EECED19C49B5800B4B207 /* OpenGpxTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGpxTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		898EECED19C49B5800B4B207 /* ChimpTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChimpTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECF219C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898EECF319C49B5800B4B207 /* OpenGpxTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGpxTrackerTests.swift; sourceTree = "<group>"; };
 		898EECFD19C49DC700B4B207 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -165,8 +165,8 @@
 		898EECD619C49B5800B4B207 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				898EECD519C49B5800B4B207 /* OpenGpxTracker.app */,
-				898EECED19C49B5800B4B207 /* OpenGpxTrackerTests.xctest */,
+				898EECD519C49B5800B4B207 /* ChimpTracker.app */,
+				898EECED19C49B5800B4B207 /* ChimpTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,9 +277,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		898EECD419C49B5800B4B207 /* OpenGpxTracker */ = {
+		898EECD419C49B5800B4B207 /* ChimpTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "OpenGpxTracker" */;
+			buildConfigurationList = 898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "ChimpTracker" */;
 			buildPhases = (
 				196CCD645C9925FAA058D622 /* [CP] Check Pods Manifest.lock */,
 				898EECD119C49B5800B4B207 /* Sources */,
@@ -293,14 +293,14 @@
 			);
 			dependencies = (
 			);
-			name = OpenGpxTracker;
+			name = ChimpTracker;
 			productName = OpenGpxTracker;
-			productReference = 898EECD519C49B5800B4B207 /* OpenGpxTracker.app */;
+			productReference = 898EECD519C49B5800B4B207 /* ChimpTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		898EECEC19C49B5800B4B207 /* OpenGpxTrackerTests */ = {
+		898EECEC19C49B5800B4B207 /* ChimpTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 898EECFA19C49B5800B4B207 /* Build configuration list for PBXNativeTarget "OpenGpxTrackerTests" */;
+			buildConfigurationList = 898EECFA19C49B5800B4B207 /* Build configuration list for PBXNativeTarget "ChimpTrackerTests" */;
 			buildPhases = (
 				898EECE919C49B5800B4B207 /* Sources */,
 				898EECEA19C49B5800B4B207 /* Frameworks */,
@@ -311,9 +311,9 @@
 			dependencies = (
 				898EECEF19C49B5800B4B207 /* PBXTargetDependency */,
 			);
-			name = OpenGpxTrackerTests;
+			name = ChimpTrackerTests;
 			productName = OpenGpxTrackerTests;
-			productReference = 898EECED19C49B5800B4B207 /* OpenGpxTrackerTests.xctest */;
+			productReference = 898EECED19C49B5800B4B207 /* ChimpTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -324,13 +324,14 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = TransitBox;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ChimpsCo;
 				TargetAttributes = {
 					898EECD419C49B5800B4B207 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = SU64RGPDF2;
+						DevelopmentTeam = 3GQ346M9Z4;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -339,14 +340,14 @@
 					};
 					898EECEC19C49B5800B4B207 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = SU64RGPDF2;
+						DevelopmentTeam = 3GQ346M9Z4;
 						LastSwiftMigration = 0800;
 						TestTargetID = 898EECD419C49B5800B4B207;
 					};
 				};
 			};
-			buildConfigurationList = 898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "OpenGpxTracker" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "ChimpTracker" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -358,8 +359,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				898EECD419C49B5800B4B207 /* OpenGpxTracker */,
-				898EECEC19C49B5800B4B207 /* OpenGpxTrackerTests */,
+				898EECD419C49B5800B4B207 /* ChimpTracker */,
+				898EECEC19C49B5800B4B207 /* ChimpTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -493,7 +494,7 @@
 /* Begin PBXTargetDependency section */
 		898EECEF19C49B5800B4B207 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 898EECD419C49B5800B4B207 /* OpenGpxTracker */;
+			target = 898EECD419C49B5800B4B207 /* ChimpTracker */;
 			targetProxy = 898EECEE19C49B5800B4B207 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -613,11 +614,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = SU64RGPDF2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3GQ346M9Z4;
 				INFOPLIST_FILE = OpenGpxTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.merlos.OpenGpxTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viitgo.gotrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = OpenGpxTracker/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 3.0;
@@ -633,11 +635,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = SU64RGPDF2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3GQ346M9Z4;
 				INFOPLIST_FILE = OpenGpxTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.merlos.OpenGpxTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viitgo.gotrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = OpenGpxTracker/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 3.0;
@@ -649,7 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = SU64RGPDF2;
+				DEVELOPMENT_TEAM = 3GQ346M9Z4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -663,7 +666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.transitbox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenGpxTracker.app/OpenGpxTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChimpTracker.app/ChimpTracker";
 			};
 			name = Debug;
 		};
@@ -671,7 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = SU64RGPDF2;
+				DEVELOPMENT_TEAM = 3GQ346M9Z4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -681,39 +684,39 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.transitbox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenGpxTracker.app/OpenGpxTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChimpTracker.app/ChimpTracker";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "OpenGpxTracker" */ = {
+		898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "ChimpTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898EECF519C49B5800B4B207 /* Debug */,
 				898EECF619C49B5800B4B207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "OpenGpxTracker" */ = {
+		898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "ChimpTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898EECF819C49B5800B4B207 /* Debug */,
 				898EECF919C49B5800B4B207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		898EECFA19C49B5800B4B207 /* Build configuration list for PBXNativeTarget "OpenGpxTrackerTests" */ = {
+		898EECFA19C49B5800B4B207 /* Build configuration list for PBXNativeTarget "ChimpTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898EECFB19C49B5800B4B207 /* Debug */,
 				898EECFC19C49B5800B4B207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

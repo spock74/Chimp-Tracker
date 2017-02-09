@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 
 //GPX creator identifier
-let kGPXCreatorString = "Open GPX Tracker for iOS"
+let kGPXCreatorString = "Open ViitGO Tracker for iOS"
 
 // 
 // A mapview that automatically tracks user 

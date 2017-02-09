@@ -13,6 +13,7 @@ import MapKit
 
 //Button colors
 let kPurpleButtonBackgroundColor: UIColor =  UIColor(red: 146.0/255.0, green: 166.0/255.0, blue: 218.0/255.0, alpha: 0.90)
+// TODO: melhorar cores
 let kGreenButtonBackgroundColor: UIColor = UIColor(red: 142.0/255.0, green: 224.0/255.0, blue: 102.0/255.0, alpha: 0.90)
 let kRedButtonBackgroundColor: UIColor =  UIColor(red: 244.0/255.0, green: 94.0/255.0, blue: 94.0/255.0, alpha: 0.90)
 let kBlueButtonBackgroundColor: UIColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 0.90)
@@ -102,7 +103,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
             case .notStarted:
                 print("switched to non started")
                 // set Tracker button to allow Start 
-                trackerButton.setTitle("Start Tracking", for: UIControlState())
+                trackerButton.setTitle("Iniciar", for: UIControlState())
                 trackerButton.backgroundColor = kGreenButtonBackgroundColor
                 //save & reset button to transparent.
                 saveButton.backgroundColor = kDisabledBlueButtonBackgroundColor
@@ -130,7 +131,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
             case .tracking:
                 print("switched to tracking mode")
                 // set tracerkButton to allow Pause
-                trackerButton.setTitle("Pause", for: UIControlState())
+                trackerButton.setTitle("Pausar", for: UIControlState())
                 trackerButton.backgroundColor = kPurpleButtonBackgroundColor
                 //activate save & reset buttons
                 saveButton.backgroundColor = kBlueButtonBackgroundColor
@@ -141,7 +142,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
             case .paused:
                 print("switched to paused mode")
                 // set trackerButton to allow Resume
-                self.trackerButton.setTitle("Resume", for: UIControlState())
+                self.trackerButton.setTitle("Continuar", for: UIControlState())
                 self.trackerButton.backgroundColor = kGreenButtonBackgroundColor
                 // activate save & reset (just in case switched from .NotStarted)
                 saveButton.backgroundColor = kBlueButtonBackgroundColor
@@ -279,7 +280,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         let appTitleX: CGFloat = 0 //self.view.frame.width/2 - appTitleW/2
         let appTitleY: CGFloat = 20
         appTitleLabel.frame = CGRect(x:appTitleX, y: appTitleY, width: appTitleW, height: appTitleH)
-        appTitleLabel.text = "  Open GPX Tracker"
+        appTitleLabel.text = "  Chimp Tracker"
         appTitleLabel.textAlignment = .left
         appTitleLabel.font = UIFont.boldSystemFont(ofSize: 10)
         //appTitleLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
@@ -293,7 +294,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         coordsLabel.textAlignment = .right
         coordsLabel.font = font12
         coordsLabel.textColor = UIColor.white
-        coordsLabel.text = "Not getting location"
+        coordsLabel.text = "Localização falhou"
         self.view.addSubview(coordsLabel)
         
         
@@ -321,14 +322,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         totalTrackedDistanceLabel.frame = CGRect(x: self.map.frame.width - 160, y: 60 + 20, width: 150, height: 40)
         totalTrackedDistanceLabel.textAlignment = .right
         totalTrackedDistanceLabel.font = font36
-        totalTrackedDistanceLabel.text = "0m"
+        totalTrackedDistanceLabel.text = "0 m"
         //timeLabel.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
         map.addSubview(totalTrackedDistanceLabel)
         
         currentSegmentDistanceLabel.frame = CGRect(x: self.map.frame.width - 160, y: 80 + 36, width: 150, height: 20)
         currentSegmentDistanceLabel.textAlignment = .right
         currentSegmentDistanceLabel.font = font18
-        currentSegmentDistanceLabel.text = "0m"
+        currentSegmentDistanceLabel.text = "0 m"
         //timeLabel.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
         map.addSubview(currentSegmentDistanceLabel)
         
@@ -402,7 +403,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         trackerButton.frame = CGRect(x: 0, y:0, width: trackerW, height: trackerH)
         trackerButton.center = CGPoint(x: trackerX, y: trackerY)
         trackerButton.layer.cornerRadius = trackerW/2
-        trackerButton.setTitle("Start Tracking", for: UIControlState())
+        trackerButton.setTitle("Iniciar", for: UIControlState())
         trackerButton.backgroundColor = kGreenButtonBackgroundColor
         trackerButton.addTarget(self, action: #selector(ViewController.trackerButtonTapped), for: .touchUpInside)
         trackerButton.isHidden = false
@@ -413,8 +414,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         
         
         // Pin Button (on the left of start)
-        let newPinW: CGFloat = kButtonSmallSize
-        let newPinH: CGFloat = kButtonSmallSize
+//        let newPinW: CGFloat = kButtonSmallSize
+//        let newPinH: CGFloat = kButtonSmallSize
+        let newPinW: CGFloat = kButtonLargeSize
+        let newPinH: CGFloat = kButtonLargeSize
         let newPinX: CGFloat = trackerX - trackerW/2 - kButtonSeparation - newPinW/2
         let newPinY: CGFloat = yCenterForButtons
         newPinButton.frame = CGRect(x: 0, y: 0, width: newPinW, height: newPinH)
@@ -444,14 +447,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         map.addSubview(followUserButton)
         
         // Save button
-        let saveW: CGFloat = kButtonSmallSize
-        let saveH: CGFloat = kButtonSmallSize
+//        let saveW: CGFloat = kButtonSmallSize
+//        let saveH: CGFloat = kButtonSmallSize
+        let saveW: CGFloat = kButtonLargeSize
+        let saveH: CGFloat = kButtonLargeSize
         let saveX: CGFloat = trackerX + trackerW/2 + kButtonSeparation + saveW/2
         let saveY: CGFloat = yCenterForButtons
         saveButton.frame = CGRect(x: 0, y: 0, width: saveW, height: saveH)
         saveButton.center = CGPoint(x: saveX, y: saveY)
         saveButton.layer.cornerRadius = saveW/2
-        saveButton.setTitle("Save", for: UIControlState())
+        saveButton.setTitle("Salvar", for: UIControlState())
         saveButton.backgroundColor = kDisabledBlueButtonBackgroundColor
         saveButton.addTarget(self, action: #selector(ViewController.saveButtonTapped), for: .touchUpInside)
         saveButton.isHidden = false
@@ -459,14 +464,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
         map.addSubview(saveButton)
         
         // Reset button
-        let resetW: CGFloat = kButtonSmallSize
-        let resetH: CGFloat = kButtonSmallSize
+//        let resetW: CGFloat = kButtonSmallSize kButtonLargeSize
+//        let resetH: CGFloat = kButtonSmallSize
+        let resetW: CGFloat = kButtonLargeSize
+        let resetH: CGFloat = kButtonLargeSize
         let resetX: CGFloat = saveX + saveW/2 + kButtonSeparation + resetW/2
         let resetY: CGFloat = yCenterForButtons
         resetButton.frame = CGRect(x: 0, y: 0, width: resetW, height: resetH)
         resetButton.center = CGPoint(x: resetX, y: resetY)
         resetButton.layer.cornerRadius = resetW/2
-        resetButton.setTitle("Reset", for: UIControlState())
+        resetButton.setTitle("Resetar", for: UIControlState())
         resetButton.backgroundColor = kDisabledRedButtonBackgroundColor
         resetButton.addTarget(self, action: #selector(ViewController.resetButtonTapped), for: .touchUpInside)
         resetButton.isHidden = false
@@ -598,9 +605,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate  {
             return
         }
         
-        let alert = UIAlertView(title: "Save as", message: "Enter GPX session name", delegate: self, cancelButtonTitle: "Continue tracking")
+        let alert = UIAlertView(title: "Savar como", message: "Nome da Sessão", delegate: self, cancelButtonTitle: "Continuar")
         
-        alert.addButton(withTitle: "Save")
+        alert.addButton(withTitle: "Salvar")
         alert.alertViewStyle = .plainTextInput
         alert.tag = kSaveSessionAlertViewTag
         alert.show()

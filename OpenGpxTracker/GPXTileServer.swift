@@ -18,7 +18,7 @@ enum GPXTileServer: Int {
     
     var name: String {
         switch self {
-        case .apple: return "Apple Mapkit (no offline cache)"
+        case .apple: return "Mapkit Apple (Sem cache offline)"
         case .openStreetMap: return "Open Street Map"
         case .openCycleMap: return "Open Cycle Maps"
         case .cartoDB: return "Carto DB"
